@@ -1278,9 +1278,9 @@ uint256 static GetOrphanRoot(const CBlockHeader* pblock)
 
 int64 GetBlockValue(int nHeight, int64 nFees)
 {
-    int64 nSubsidy = 15 * COIN;
+    int64 nSubsidy = 3 * COIN;
 
-    // Subsidy is cut in half every 700000 blocks
+    // Subsidy is cut in half every 35000 blocks
     nSubsidy >>= (nHeight / Params().SubsidyHalvingInterval());
 
     return nSubsidy + nFees;
